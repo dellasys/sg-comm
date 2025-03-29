@@ -7,3 +7,8 @@ type ReplaceDeep<T, U> = {
       : U[K]
     : T[K];
 } & Omit<U, keyof T>;
+
+interface IconProps {
+  color?: string;
+  size?: number;
+}
