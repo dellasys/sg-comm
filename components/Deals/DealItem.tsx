@@ -1,23 +1,36 @@
 import { useState } from "react";
-import { Image, StyleSheet } from "react-native";
+import {
+  Image,
+  ImageLoadEventData,
+  LayoutChangeEvent,
+  NativeSyntheticEvent,
+  StyleSheet,
+} from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
-const PostItem = ({ title, content, imageUrl }) => {
-  const [parentWidth, setParentWidth] = useState(0);
+interface DealItemProps {
+  title: string;
+  content: string;
+  imageUrl: string;
+}
+
+const DealItem = ({ title, content, imageUrl }: DealItemProps) => {
+  const [dealItemWidth, setDealItemWidth] = useState(0);
   const [imageHeight, setImageHeight] = useState(200); // 初始高度
-  // const fixedWidth = 205; // 固定宽度
-  console.log({ parentWidth });
-  const handleParentLayout = ({ nativeEvent }) => {
-    setParentWidth(nativeEvent.layout.width);
+
+  const handleParentLayout = ({ nativeEvent }: LayoutChangeEvent) => {
+    setDealItemWidth(nativeEvent.layout.width);
   };
 
-  const handleImageLoad = ({ nativeEvent }) => {
+  const handleImageLoad = ({
+    nativeEvent,
+  }: NativeSyntheticEvent<ImageLoadEventData>) => {
     const { width, height } = nativeEvent.source;
-
     const aspectRatio = width / height;
-    const newHeight = parentWidth / aspectRatio;
+    const newHeight = dealItemWidth / aspectRatio;
+
     setImageHeight(newHeight);
   };
 
@@ -41,7 +54,7 @@ const PostItem = ({ title, content, imageUrl }) => {
   );
 };
 
-export default PostItem;
+export default DealItem;
 
 const styles = StyleSheet.create({
   postContainer: {

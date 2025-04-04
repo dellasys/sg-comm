@@ -4,29 +4,51 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import * as Linking from "expo-linking";
+import { Stack, Tabs, useLocalSearchParams } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { StatusBar } from "expo-status-bar";
-import { useEffect } from "react";
+
 import "react-native-reanimated";
+import { Platform, TouchableOpacity, StyleSheet } from "react-native";
+
+import { HapticTab } from "@/components/HapticTab";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useColorScheme } from "@/hooks/useColorScheme";
-import { Tabs } from "expo-router";
-import { Colors } from "@/constants/Colors";
-import { HapticTab } from "@/components/HapticTab";
 import TabBarBackground from "@/components/ui/TabBarBackground";
-import { Platform, TouchableOpacity, StyleSheet } from "react-native";
-import * as Linking from "expo-linking";
+import { Colors } from "@/constants/Colors";
+import { useColorScheme } from "@/hooks/useColorScheme";
+import {
+  isValidSingaporeMobileNumber,
+  removeSpacesFromString,
+} from "@/utils/helper";
 
 export default function ServiceLayout() {
   const colorScheme = useColorScheme();
 
-  const handlePress = () => {
-    console.log("waaa");
-  };
-
   return (
+    // <ThemedText>12312</ThemedText>
+    // <Stack>
+    //   <Stack.Screen
+    //     name="index"
+    //     options={{
+    //       title: "sdsds",
+    //       headerStyle: { backgroundColor: "#f4511e" },
+    //       headerTintColor: "#fff",
+    //       headerTitle: "Homeless33",
+    //     }}
+    //   />
+    //   <Stack.Screen name="+not-found" />
+    // </Stack>
+
+    // <Tabs screenOptions={{ headerShown: false, tabBarStyle: styles.tabBar }}>
+    //   <Tabs.Screen
+    //     name="index"
+    //     options={{
+    //       href: null,
+    //       headerTitle: "Home",
+    //     }}
+    //   />
+    // </Tabs>
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
@@ -49,12 +71,21 @@ export default function ServiceLayout() {
 }
 
 function CustomTabBar({ state, descriptors, navigation }: any) {
+  const { nationalPhoneNumber } = useLocalSearchParams();
+  const phoneNumber = removeSpacesFromString(nationalPhoneNumber as string);
+
+  const isValidMobileNumber = isValidSingaporeMobileNumber(phoneNumber);
+
+  if (!isValidMobileNumber) {
+    return null;
+  }
+
   return (
     <ThemedView style={styles.tabBarContainer}>
       {/* WhatsApp Button */}
       <TouchableOpacity
         style={styles.whatsappButton}
-        onPress={() => Linking.openURL("https://wa.me/82410032")}
+        onPress={() => Linking.openURL(`https://wa.me/65${phoneNumber}`)}
       >
         <ThemedText style={styles.whatsappText}>Chat on WhatsApp</ThemedText>
       </TouchableOpacity>

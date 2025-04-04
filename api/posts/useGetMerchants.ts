@@ -6,13 +6,13 @@ import supabase from "@/utils/supabase";
 
 export const GET_POSTS = "GET_POSTS";
 
-export const useGetPosts = (): UseQueryResult<
-  ObjectToCamel<Tables<"posts">[]>
+export const useGetMerchants = (): UseQueryResult<
+  ObjectToCamel<Tables<"merchants">[]>
 > => {
   return useQuery({
     queryKey: [GET_POSTS],
     queryFn: async () => {
-      const { data: posts } = await supabase.from("posts").select("*");
+      const { data: posts } = await supabase.from("merchants").select("*");
 
       if (posts !== null) {
         return objectToCamel(posts);

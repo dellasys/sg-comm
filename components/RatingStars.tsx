@@ -22,37 +22,48 @@ const RatingStars = ({ rating }: RatingStarsProps) => {
   const wholeStars = Math.floor(rating);
   const halfStar = isDecimal ? 1 : 0;
   const emptyStars = 5 - wholeStars - halfStar;
-  let starCount = -1;
+  const starCount = -1;
+
+  if (rating === 0) {
+    return null;
+  }
 
   return (
     <ThemedView style={styles.container}>
-      {wholeStars > 0 &&
-        Array.from({ length: wholeStars }).map((_, starIndex) => {
-          starCount++;
-          return (
-            <ThemedView style={styles.starIcon} key={`start-${starIndex}`}>
-              <Star2Icon color={RATING_STAR_COLOR[starCount]} />
-            </ThemedView>
-          );
-        })}
-
-      {halfStar > 0 && (
-        <ThemedView style={styles.starIcon}>
-          <HalfStarIcon color={RATING_STAR_COLOR[starCount]} />
-        </ThemedView>
-      )}
-
-      {emptyStars > 0 &&
-        Array.from({ length: emptyStars }).map((_, starIndex) => {
-          return (
-            <ThemedView style={styles.starIcon} key={`empty-${starIndex}`}>
-              <Star2Icon color="#e3e2e1" />
-            </ThemedView>
-          );
-        })}
+      <Star2Icon color="#f77b23" size={13} />
       <ThemedText style={styles.ratingText}>{rating}</ThemedText>
     </ThemedView>
   );
+
+  // return (
+  //   <ThemedView style={styles.container}>
+  //     {wholeStars > 0 &&
+  //       Array.from({ length: wholeStars }).map((_, starIndex) => {
+  //         starCount++;
+  //         return (
+  //           <ThemedView style={styles.starIcon} key={`start-${starIndex}`}>
+  //             <Star2Icon color={RATING_STAR_COLOR[starCount]} size={15} />
+  //           </ThemedView>
+  //         );
+  //       })}
+
+  //     {halfStar > 0 && (
+  //       <ThemedView style={styles.starIcon}>
+  //         <HalfStarIcon color={RATING_STAR_COLOR[starCount]} size={15} />
+  //       </ThemedView>
+  //     )}
+
+  //     {emptyStars > 0 &&
+  //       Array.from({ length: emptyStars }).map((_, starIndex) => {
+  //         return (
+  //           <ThemedView style={styles.starIcon} key={`empty-${starIndex}`}>
+  //             <Star2Icon color="#e3e2e1" size={15} />
+  //           </ThemedView>
+  //         );
+  //       })}
+  //     <ThemedText style={styles.ratingText}>{rating}</ThemedText>
+  //   </ThemedView>
+  // );
 };
 
 export default RatingStars;
@@ -62,10 +73,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "#fcefe6",
+    width: 50,
+    // paddingHorizontal: 3,
+    borderRadius: 5,
   },
   ratingText: {
     marginLeft: 5,
-    fontWeight: 800,
+    // fontWeight: 800,
+    fontSize: 12,
     color: "#eb4034",
   },
   starIcon: {

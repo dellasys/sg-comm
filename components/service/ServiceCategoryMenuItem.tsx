@@ -1,31 +1,37 @@
+import { useRouter } from "expo-router";
 import { StyleSheet, TouchableOpacity } from "react-native";
+import { ObjectToCamel } from "ts-case-convert";
+
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import { useRouter } from "expo-router";
+import { Tables } from "@/types/database.types";
+import IconMap from "@/utils/iconMap";
 
-interface ServiceMenuItemProps {
-  icon: React.ReactNode;
-  label: string;
-}
-
-const ServiceMenuItem = ({ icon, label }: ServiceMenuItemProps) => {
+const ServiceCategoryMenuItem = ({
+  icon,
+  label,
+  searchKey,
+}: ObjectToCamel<Tables<"service_categories">>) => {
   const router = useRouter();
+  const Icon = IconMap.get(icon) ?? IconMap.get("unknown");
 
   const handleMenuItemPress = () => {
-    router.push(`/service?category=${label}`);
+    router.push(`/service?category=${searchKey}&label=${label}`);
   };
 
   return (
     <TouchableOpacity onPress={handleMenuItemPress}>
       <ThemedView style={styles.container}>
-        <ThemedView style={styles.iconWrapper}>{icon}</ThemedView>
+        <ThemedView style={styles.iconWrapper}>
+          {Icon && <Icon size={45} />}
+        </ThemedView>
         <ThemedText style={styles.label}>{label}</ThemedText>
       </ThemedView>
     </TouchableOpacity>
   );
 };
 
-export default ServiceMenuItem;
+export default ServiceCategoryMenuItem;
 
 const styles = StyleSheet.create({
   container: {

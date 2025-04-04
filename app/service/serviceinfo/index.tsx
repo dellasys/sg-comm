@@ -1,21 +1,53 @@
-import { Image, StyleSheet, Platform } from "react-native";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
+import { StyleSheet } from "react-native";
 
+import {
+  useGetPlaceDetails,
+  GET_PLACE_DETAILS,
+} from "@/api/google/placeDetails";
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import CommonLoader from "@/components/loaders/CommonLoader";
+import ServiceMapView from "@/components/serviceInfo/ServiceMapView";
+import queryClient from "@/utils/queryClient";
 
 export default function ServiceInfo() {
+  const { placeId } = useLocalSearchParams();
+  const { data, isLoading } = useGetPlaceDetails(placeId as string);
+
+  const { displayName, location } = data ?? {};
+  const { latitude, longitude } = location ?? {};
+
+  useEffect(() => {
+    return () => {
+      void queryClient.resetQueries({
+        queryKey: [GET_PLACE_DETAILS],
+        exact: true,
+      });
+    };
+  }, []);
+
+  if (isLoading) {
+    return <CommonLoader />;
+  }
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
-        <Image
-          source={require("@/assets/images/partial-react-logo.png")}
-          style={styles.reactLogo}
+        <ServiceMapView
+          latitude={latitude}
+          longitude={longitude}
+          displayName={displayName?.text}
         />
       }
     >
       <ThemedView>
+        <ThemedText style={{ fontWeight: "bold" }}>
+          {displayName?.text}
+        </ThemedText>
         <ThemedText>
           What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard
@@ -70,6 +102,9 @@ export default function ServiceInfo() {
 }
 
 const styles = StyleSheet.create({
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
   headerImage: {
     color: "#808080",
     bottom: -90,

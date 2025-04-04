@@ -1,54 +1,115 @@
-import { useLocalSearchParams } from "expo-router";
-import { Image, StyleSheet, ScrollView, RefreshControl } from "react-native";
+import { useLocalSearchParams, useNavigation } from "expo-router";
+import { useEffect } from "react";
+import {
+  StyleSheet,
+  ScrollView,
+  NativeSyntheticEvent,
+  NativeScrollEvent,
+} from "react-native";
 
-import { useGetPosts } from "@/api/posts/useGetPosts";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
+import { useSearchPlaces, SEARCH_PLACES } from "@/api/google/placeSearch";
 import PostRow from "@/components/PostRow";
 import EndOfPost from "@/components/PostRow/EndOfPost";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import CommonLoader from "@/components/loaders/CommonLoader";
+import { ServiceCategory } from "@/types";
+import queryClient from "@/utils/queryClient";
 
-export default function HomeScreen() {
-  const { label } = useLocalSearchParams();
-  const { data = [], isFetching, refetch } = useGetPosts();
+export default function ServiceScreen() {
+  const navigation = useNavigation();
+  const { category, label } = useLocalSearchParams();
+
+  const {
+    data: searchResult,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    isLoading,
+  } = useSearchPlaces(category as ServiceCategory);
+
+  const { pages = [] } = searchResult ?? {};
+  const serviceList = pages.flatMap((page) => page.places) ?? [];
+
+  const handleScroll = async (
+    event: NativeSyntheticEvent<NativeScrollEvent>,
+  ) => {
+    if (!hasNextPage || isFetchingNextPage) {
+      return;
+    }
+
+    const contentOffset = event.nativeEvent.contentOffset || {};
+    const contentSize = event.nativeEvent.contentSize || {};
+    const layoutMeasurement = event.nativeEvent.layoutMeasurement || {};
+    const y = contentOffset.y || 0;
+    const height = layoutMeasurement.height || 0;
+    const contentHeight = contentSize.height || 0;
+    const scrollThreshold = 50; // Pixels from bottom to trigger load
+
+    // Check if user has scrolled to bottom
+    if (y + height >= contentHeight - scrollThreshold) {
+      console.log("Reached bottom, fetching more items...");
+      void fetchNextPage();
+    }
+  };
+
+  useEffect(() => {
+    navigation.setOptions({ headerTitle: label });
+  }, [label, navigation]);
+
+  useEffect(() => {
+    return () => {
+      void queryClient.resetQueries({
+        queryKey: [SEARCH_PLACES],
+        exact: true,
+      });
+    };
+  }, []);
+
+  if (isLoading) {
+    return <CommonLoader />;
+  }
 
   return (
-    <ScrollView
-      contentContainerStyle={styles.scrollView}
-      refreshControl={
-        <RefreshControl
-          refreshing={isFetching}
-          onRefresh={refetch}
-          title="Loading..."
-        />
-      }
-    >
-      <ParallaxScrollView
-        headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
-        headerImage={
-          <Image
-            source={{
-              uri: "https://wmwcqwluncoptiivxzut.supabase.co/storage/v1/object/public/services//Plumbers%20Tools%20Selection.jpg",
-            }}
-            style={styles.banner}
-          />
-        }
-      >
-        {data.map((post) => {
-          const postId = post.id;
-          return <PostRow key={postId} postData={post} />;
-        })}
+    <ScrollView onScroll={handleScroll} scrollEventThrottle={200}>
+      <ThemedView style={styles.container}>
+        {serviceList.map((place, index) => {
+          // if (place?.displayName?.text.includes("Superpets")) {
+          //   console.log(8839, { place });
+          // }
 
-        <EndOfPost />
-      </ParallaxScrollView>
+          return <PostRow key={place.id} {...place} />;
+        })}
+        {isFetchingNextPage && (
+          <ThemedView style={styles.fetchMoreContainer}>
+            <ThemedText style={styles.fetchMoreText}>
+              Fetching more...
+            </ThemedText>
+          </ThemedView>
+        )}
+        {!hasNextPage && <EndOfPost />}
+      </ThemedView>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollView: {},
+  container: {
+    padding: 10,
+    backgroundColor: "#f1f1f1",
+    gap: 10,
+  },
   banner: {
     width: "100%",
     height: "100%",
+  },
+  fetchMoreContainer: {
+    alignItems: "center",
+    paddingVertical: 10,
+    backgroundColor: "transparent",
+  },
+  fetchMoreText: {
+    fontSize: 16,
+    color: "#666",
   },
 });
