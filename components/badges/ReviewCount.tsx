@@ -1,11 +1,10 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Image } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
-import GoogleLogoIcon from "@/icons/GoogleLogo";
 
 interface MoreThanThousandReviewsProps {
-  numOfReviews: number;
+  numOfReviews?: number;
 }
 
 function roundReviewCount(reviewCount: number) {
@@ -18,20 +17,28 @@ function roundReviewCount(reviewCount: number) {
 }
 
 const ReviewCount = ({ numOfReviews }: MoreThanThousandReviewsProps) => {
+  if (!numOfReviews) {
+    return null;
+  }
+
   if (numOfReviews < 10) {
     return null;
   }
 
   return (
     <ThemedView style={styles.container}>
+      <ThemedView style={styles.logoWrapper}>
+        <Image
+          source={require("@/assets/images/google-icon.png")}
+          style={styles.googleLogo}
+        />
+      </ThemedView>
       <ThemedText style={styles.label}>
+        {" "}
         {roundReviewCount(numOfReviews)}
       </ThemedText>
       <ThemedText style={styles.plusSign}>+</ThemedText>
-      <ThemedView style={styles.logoWrapper}>
-        <GoogleLogoIcon size={10} color="#2181c2" />
-      </ThemedView>
-      <ThemedText style={styles.label}>Reviews</ThemedText>
+      {/* <ThemedText style={styles.label}> Reviews</ThemedText> */}
     </ThemedView>
   );
 };
@@ -54,6 +61,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "center",
+  },
+  googleLogo: {
+    width: 12,
+    height: 12,
   },
   logoWrapper: {
     paddingLeft: 5,

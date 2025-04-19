@@ -16,7 +16,7 @@ const ServiceCategoryMenuItem = ({
   const Icon = IconMap.get(icon) ?? IconMap.get("unknown");
 
   const handleMenuItemPress = () => {
-    router.push(`/service?category=${searchKey}&label=${label}`);
+    router.push(`/services?category=${searchKey}&label=${label}`);
   };
 
   return (

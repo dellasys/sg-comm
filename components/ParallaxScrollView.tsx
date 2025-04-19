@@ -10,8 +10,9 @@ import Animated, {
 import { ThemedView } from "@/components/ThemedView";
 import { useBottomTabOverflow } from "@/components/ui/TabBarBackground";
 import { useColorScheme } from "@/hooks/useColorScheme";
+import useHasTabBar from "@/hooks/useHasTabBar";
 
-const HEADER_HEIGHT = 250;
+const HEADER_HEIGHT = 350;
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
@@ -23,10 +24,11 @@ export default function ParallaxScrollView({
   headerImage,
   headerBackgroundColor,
 }: Props) {
+  const hasTabBar = useHasTabBar();
   const colorScheme = useColorScheme() ?? "light";
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
-  const bottom = useBottomTabOverflow();
+  const bottom = useBottomTabOverflow() ?? 0;
 
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
@@ -35,14 +37,14 @@ export default function ParallaxScrollView({
           translateY: interpolate(
             scrollOffset.value,
             [-HEADER_HEIGHT, 0, HEADER_HEIGHT],
-            [-HEADER_HEIGHT / 2, 0, HEADER_HEIGHT * 0.75]
+            [-HEADER_HEIGHT / 2, 0, HEADER_HEIGHT * 0.75],
           ),
         },
         {
           scale: interpolate(
             scrollOffset.value,
             [-HEADER_HEIGHT, 0, HEADER_HEIGHT],
-            [2, 1, 1]
+            [2, 1, 1],
           ),
         },
       ],
@@ -55,7 +57,7 @@ export default function ParallaxScrollView({
         ref={scrollRef}
         scrollEventThrottle={16}
         scrollIndicatorInsets={{ bottom }}
-        contentContainerStyle={{ paddingBottom: bottom }}
+        // contentContainerStyle={{ paddingBottom: bottom }}
       >
         <Animated.View
           style={[
@@ -75,6 +77,7 @@ export default function ParallaxScrollView({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "transparent",
   },
   header: {
     height: HEADER_HEIGHT,
@@ -85,6 +88,10 @@ const styles = StyleSheet.create({
     padding: 12,
     gap: 12,
     overflow: "hidden",
-    // backgroundColor: "#f4f4f4",
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    boxShadow:
+      "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+    marginTop: -20,
   },
 });

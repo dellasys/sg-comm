@@ -1,5 +1,7 @@
 import { useInfiniteQuery } from "@tanstack/react-query";
 
+import { GooglePlaceApiResponse } from "@/types/google/placesTypes";
+
 const searchPlaces = async (
   query: string,
   nextPageToken = "",
@@ -26,117 +28,6 @@ const searchPlaces = async (
     throw new Error("Failed to fetch places");
   }
 };
-
-export interface CurrentOpeningHoursPeriods {
-  close: {
-    day: number;
-    hour: number;
-    minute: number;
-    truncated: boolean;
-  };
-  open: {
-    day: number;
-    hour: number;
-    minute: number;
-    truncated: boolean;
-  };
-}
-
-export interface CurrentOpeningHours {
-  openNow: boolean;
-  periods: CurrentOpeningHoursPeriods[];
-  nextCloseTime: string;
-}
-
-export interface RegularSecondaryOpeningHours {
-  nextCloseTime: string;
-  nextOpenTime: string;
-  openNow: boolean;
-  periods: {
-    close: {
-      day: number;
-      hour: number;
-      minute: number;
-    };
-    open: {
-      day: number;
-      hour: number;
-      minute: number;
-    };
-  }[];
-}
-
-export interface Landmark {
-  displayName: {
-    text: string;
-    languageCode: string;
-  };
-  name: string;
-  placeId: string;
-  spatialRelationship: string;
-  straightLineDistanceMeters: number;
-  travelDistanceMeters: number;
-  types: string[];
-}
-
-export interface AddressDescriptor {
-  area: {
-    containment: string;
-    displayName: {
-      text: string;
-      languageCode: string;
-    };
-    name: string;
-    placeId: string;
-  }[];
-  landmarks: Landmark[];
-}
-
-export interface GooglePlaceApiResponse {
-  id: string;
-  name: string;
-  types: string[];
-  displayName: {
-    text: string;
-    languageCode: string;
-  };
-  formattedAddress: string;
-  priceLevel: number;
-  nationalPhoneNumber: string;
-  internationalPhoneNumber: string;
-  rating: number;
-  businessStatus: string;
-  googleMapsUri: string;
-  websiteUri: string;
-  regularOpeningHours: string;
-  userRatingCount: number;
-  currentOpeningHours?: CurrentOpeningHours;
-  shortFormattedAddress: string;
-  iconBackgroundColor: string;
-  iconMaskBaseUri: string;
-  reviews: Record<string, unknown>;
-  photos: Record<string, unknown>;
-  restroom: boolean;
-  parkingOptions: Record<string, unknown>;
-  develivery: boolean;
-  regularSecondaryOpeningHours: RegularSecondaryOpeningHours[];
-  paymentOptions: {
-    acceptsCashOnly: boolean;
-    acceptsCreditCards: boolean;
-    acceptsDebitCards: boolean;
-    acceptsNfc: boolean;
-  };
-  location: {
-    latitude: number;
-    longitude: number;
-  };
-  addressDescriptor: AddressDescriptor;
-  accessibilityOptions: {
-    wheelchairAccessibleEntrance: boolean;
-    wheelchairAccessibleParking: boolean;
-    wheelchairAccessibleRestroom: boolean;
-  };
-}
 
 interface SearchPlacesResponse {
   nextPageToken?: string;

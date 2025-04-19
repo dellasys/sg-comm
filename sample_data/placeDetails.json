@@ -1,0 +1,714 @@
+{
+  "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI",
+  "id": "ChIJuQ2u_tcb2jER42J7DodkVMI",
+  "types": [
+    "plumber",
+    "general_contractor",
+    "point_of_interest",
+    "establishment"
+  ],
+  "nationalPhoneNumber": "3165 0126",
+  "internationalPhoneNumber": "+65 3165 0126",
+  "formattedAddress": "60 Paya Lebar Rd, #07-54, Singapore 409051",
+  "addressComponents": [
+    {
+      "longText": "#07-54",
+      "shortText": "#07-54",
+      "types": ["subpremise"],
+      "languageCode": "und"
+    },
+    {
+      "longText": "60",
+      "shortText": "60",
+      "types": ["street_number"],
+      "languageCode": "en-US"
+    },
+    {
+      "longText": "Paya Lebar Road",
+      "shortText": "Paya Lebar Rd",
+      "types": ["route"],
+      "languageCode": "en"
+    },
+    {
+      "longText": "Geylang",
+      "shortText": "Geylang",
+      "types": ["neighborhood", "political"],
+      "languageCode": "en"
+    },
+    {
+      "longText": "Singapore",
+      "shortText": "Singapore",
+      "types": ["locality", "political"],
+      "languageCode": "en"
+    },
+    {
+      "longText": "Singapore",
+      "shortText": "SG",
+      "types": ["country", "political"],
+      "languageCode": "en"
+    },
+    {
+      "longText": "409051",
+      "shortText": "409051",
+      "types": ["postal_code"],
+      "languageCode": "en-US"
+    }
+  ],
+  "plusCode": {
+    "globalCode": "6PH58V9V+M2",
+    "compoundCode": "8V9V+M2 Singapore"
+  },
+  "location": {
+    "latitude": 1.3191724999999999,
+    "longitude": 103.8925563
+  },
+  "viewport": {
+    "low": {
+      "latitude": 1.317742219708498,
+      "longitude": 103.89090291970849
+    },
+    "high": {
+      "latitude": 1.3204401802915022,
+      "longitude": 103.8936008802915
+    }
+  },
+  "rating": 5,
+  "googleMapsUri": "https://maps.google.com/?cid=14002927672628044515",
+  "websiteUri": "https://www.mrplumber.sg/mr-plumber-singapore-central/",
+  "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0
+        }
+      }
+    ],
+    "weekdayDescriptions": [
+      "Monday: 8:00 AM – 10:00 PM",
+      "Tuesday: 8:00 AM – 10:00 PM",
+      "Wednesday: 8:00 AM – 10:00 PM",
+      "Thursday: 8:00 AM – 10:00 PM",
+      "Friday: 8:00 AM – 10:00 PM",
+      "Saturday: 8:00 AM – 10:00 PM",
+      "Sunday: 8:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2025-04-05T14:00:00Z"
+  },
+  "utcOffsetMinutes": 480,
+  "adrFormatAddress": "<span class=\"street-address\">60 Paya Lebar Rd</span>, #07-54, <span class=\"country-name\">Singapore</span> <span class=\"postal-code\">409051</span>",
+  "businessStatus": "OPERATIONAL",
+  "userRatingCount": 689,
+  "iconMaskBaseUri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+  "iconBackgroundColor": "#7B9EB0",
+  "displayName": {
+    "text": "Mr Plumber Singapore - Central",
+    "languageCode": "en"
+  },
+  "primaryTypeDisplayName": {
+    "text": "Plumber",
+    "languageCode": "en-US"
+  },
+  "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+      {
+        "open": {
+          "day": 0,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 6
+          }
+        },
+        "close": {
+          "day": 0,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 6
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 1,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 7
+          }
+        },
+        "close": {
+          "day": 1,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 7
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 2,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 8
+          }
+        },
+        "close": {
+          "day": 2,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 8
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 3,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 9
+          }
+        },
+        "close": {
+          "day": 3,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 9
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 4,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 10
+          }
+        },
+        "close": {
+          "day": 4,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 10
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 5,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 11
+          }
+        },
+        "close": {
+          "day": 5,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 11
+          }
+        }
+      },
+      {
+        "open": {
+          "day": 6,
+          "hour": 8,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 5
+          }
+        },
+        "close": {
+          "day": 6,
+          "hour": 22,
+          "minute": 0,
+          "date": {
+            "year": 2025,
+            "month": 4,
+            "day": 5
+          }
+        }
+      }
+    ],
+    "weekdayDescriptions": [
+      "Monday: 8:00 AM – 10:00 PM",
+      "Tuesday: 8:00 AM – 10:00 PM",
+      "Wednesday: 8:00 AM – 10:00 PM",
+      "Thursday: 8:00 AM – 10:00 PM",
+      "Friday: 8:00 AM – 10:00 PM",
+      "Saturday: 8:00 AM – 10:00 PM",
+      "Sunday: 8:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2025-04-05T14:00:00Z"
+  },
+  "primaryType": "plumber",
+  "shortFormattedAddress": "60 Paya Lebar Rd, #07-54 Paya Lebar Square, Singapore",
+  "reviews": [
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/reviews/ChZDSUhNMG9nS0VJQ0FnTUNnb3QtUUhREAE",
+      "relativePublishTimeDescription": "a month ago",
+      "rating": 5,
+      "text": {
+        "text": "Plumber Kumar was very quick and efficient in installing my washing machine. The company was also prompt and professional in their response to my queries! And to top it off, it was affordable compared to many other companies 👍🏼",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "Plumber Kumar was very quick and efficient in installing my washing machine. The company was also prompt and professional in their response to my queries! And to top it off, it was affordable compared to many other companies 👍🏼",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Akhimullah",
+        "uri": "https://www.google.com/maps/contrib/101625162786485631249/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWV2WHRZuoEGIk5bdMo41N41I-bKhbqeoXCoxsp0J61Gc6R6Vg=s128-c0x00000000-cc-rp-mo"
+      },
+      "publishTime": "2025-02-15T11:15:59.509208Z",
+      "flagContentUri": "https://www.google.com/local/review/rap/report?postId=ChZDSUhNMG9nS0VJQ0FnTUNnb3QtUUhREAE&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChZDSUhNMG9nS0VJQ0FnTUNnb3QtUUhREAE!2m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/reviews/ChdDSUhNMG9nS0VJQ0FnTUN3X19EdDRBRRAB",
+      "relativePublishTimeDescription": "a week ago",
+      "rating": 5,
+      "text": {
+        "text": "Engaged Everyworks for a toilet bowl leaking issue. Customer service was quick in their WhatsApp reply and sent over the quotation and necessary details of my booking. Kumar was assigned to my case and I have no complaints. He was knowledgeable and advised on the issue. He was also not pushy and allowed me to decide on the next course of action. Only complaint is that the company seems to have a lot of appointments so you may not get the timing and date that you want. I figured it is because their prices are competitive and they are able to deliver. Would definitely engage them again! Highly recommended!",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "Engaged Everyworks for a toilet bowl leaking issue. Customer service was quick in their WhatsApp reply and sent over the quotation and necessary details of my booking. Kumar was assigned to my case and I have no complaints. He was knowledgeable and advised on the issue. He was also not pushy and allowed me to decide on the next course of action. Only complaint is that the company seems to have a lot of appointments so you may not get the timing and date that you want. I figured it is because their prices are competitive and they are able to deliver. Would definitely engage them again! Highly recommended!",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Nadia Raihanah",
+        "uri": "https://www.google.com/maps/contrib/109003123883088784744/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocK8CKvL7yrzoyWr5sYBOraXM1arL2bdbdwC5v-tCilOFaQIhA=s128-c0x00000000-cc-rp-mo"
+      },
+      "publishTime": "2025-03-22T10:55:05.310135Z",
+      "flagContentUri": "https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnTUN3X19EdDRBRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTUN3X19EdDRBRRAB!2m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/reviews/ChdDSUhNMG9nS0VJQ0FnTUNna0pfLV9nRRAB",
+      "relativePublishTimeDescription": "a month ago",
+      "rating": 5,
+      "text": {
+        "text": "Plumber Venkat is punctual & efficient. His workmanship is superb.\n\nAny problem with plumbing issue, i will not hesitate to look for his help in future.",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "Plumber Venkat is punctual & efficient. His workmanship is superb.\n\nAny problem with plumbing issue, i will not hesitate to look for his help in future.",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Derrick Ong CL",
+        "uri": "https://www.google.com/maps/contrib/115244578314165107581/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocLBdMwA7qsvMIM0Anszi-uJJI_3-BAh_NLQLHLeXj43Hj_KbA=s128-c0x00000000-cc-rp-mo"
+      },
+      "publishTime": "2025-02-13T11:49:11.298188Z",
+      "flagContentUri": "https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnTUNna0pfLV9nRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTUNna0pfLV9nRRAB!2m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/reviews/ChdDSUhNMG9nS0VJQ0FnTUR3eUozbDhnRRAB",
+      "relativePublishTimeDescription": "in the last week",
+      "rating": 5,
+      "text": {
+        "text": "I had the pleasure of engaging Venkat's plumbing services for the second time within a week. I can confidently say that he continues to impress! Venkat replaced my toilet bowl with remarkable efficiency and skill.\n\nFrom the moment he arrived, his showmanship was evident. Venkat carries himself with a level of expertise and confidence that immediately puts you at ease.\n\nThe quality of his work is exceptional. I appreciate his attention to detail. The new toilet bowl looks great, and I'm thrilled with how quickly he completed the job. It's clear that Venkat takes pride in his work and that makes a significant difference in the overall experience.",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "I had the pleasure of engaging Venkat's plumbing services for the second time within a week. I can confidently say that he continues to impress! Venkat replaced my toilet bowl with remarkable efficiency and skill.\n\nFrom the moment he arrived, his showmanship was evident. Venkat carries himself with a level of expertise and confidence that immediately puts you at ease.\n\nThe quality of his work is exceptional. I appreciate his attention to detail. The new toilet bowl looks great, and I'm thrilled with how quickly he completed the job. It's clear that Venkat takes pride in his work and that makes a significant difference in the overall experience.",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "eizal lazie",
+        "uri": "https://www.google.com/maps/contrib/111594656916235990437/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a/ACg8ocJm_K6UUKA75Z-1eBoUm_Ce-mRM_tZSikgsQbFF_G0T0QaLtg=s128-c0x00000000-cc-rp-mo"
+      },
+      "publishTime": "2025-03-29T02:46:01.300498Z",
+      "flagContentUri": "https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnTUR3eUozbDhnRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnTUR3eUozbDhnRRAB!2m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/reviews/ChdDSUhNMG9nS0VJQ0FnSURfNmVEZ3ZRRRAB",
+      "relativePublishTimeDescription": "2 months ago",
+      "rating": 5,
+      "text": {
+        "text": "Thanks to Mr. Kumar and Mr. Mahfuz for doing a great job on the pipe replacement. They have provide a professional service to ensure no more leakage to the problem area. The 6 months warranty is inclusive for the post servicing for any further issue occurred. See attached before after the pipe replacement.",
+        "languageCode": "en"
+      },
+      "originalText": {
+        "text": "Thanks to Mr. Kumar and Mr. Mahfuz for doing a great job on the pipe replacement. They have provide a professional service to ensure no more leakage to the problem area. The 6 months warranty is inclusive for the post servicing for any further issue occurred. See attached before after the pipe replacement.",
+        "languageCode": "en"
+      },
+      "authorAttribution": {
+        "displayName": "Wendy Yeow",
+        "uri": "https://www.google.com/maps/contrib/107015180998375161835/reviews",
+        "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVytyt9aC8qxbL_8BReYYseVLGSDNz_WTsutI85b0bxrep-S-cI=s128-c0x00000000-cc-rp-mo-ba2"
+      },
+      "publishTime": "2025-01-25T08:03:46.544844Z",
+      "flagContentUri": "https://www.google.com/local/review/rap/report?postId=ChdDSUhNMG9nS0VJQ0FnSURfNmVEZ3ZRRRAB&d=17924085&t=1",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURfNmVEZ3ZRRRAB!2m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    }
+  ],
+  "photos": [
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcLdEoVDb0FJv3TlXNEzNOEggnqjXu1-GK1If43WpXMIfoGtOsUSaqDZV7jdFcwdacjhA9OFcwcP8B_WROAE5nCrsr9DghDD_eOkL1lwkX7D-F8tIs7qyJjrAOX3JRxNYpczpaAQ4yBMBJkaZJQ_SYNxr-UClI6fVguC1oAMJSV07bvZF-bsj5ZHTqOGt3PCiTQd_h4rn33Ox7Bu1wArN4W6Zvsiy9LGioSEag5TVKcryG85ICNb95NMaJBDJygWftL44xKaTbT7Bi92i8l6pRA-b2dU5vY1cXqJOlV5P58jWLvlhRGX7sZVWCvO-S-76DoOJqRsLLKE_S5iPkD5UchSMhbAZkfIXc1jeSTJAkK5G9U9IeQERt8A53tbRXSuWYHdhIzLZHce-GjeS5jt-C0FodfPlKMBMfl6_Sjp6nqakVQy",
+      "widthPx": 3024,
+      "heightPx": 3024,
+      "authorAttributions": [
+        {
+          "displayName": "Shirley Tang",
+          "uri": "https://maps.google.com/maps/contrib/105586267363834099598",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVLhD8SqBL_y9HinZCVPmqwyU0X7GFQVsmrVJSujEg7EARDcdRy=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgID3oPvR0AE&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgID3oPvR0AE!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcJ1A4gBo4pmrCw4XiLm3H_d4Ys58BlryX4rti2MAQM4yHR4VwfQoJJrsyt7Wo4yjMoE7Q-OuWljApU1MkhsBv311oE_0xvSXPdnH0SFaVmwsqkqRJ5AQ9q0_euPPWtPSKAwxPCO4EKyHbfP4ZzsU-X2PQz3bnOGgOzpCp1VKnX5KsUaHqKwNqESJO_pUO395_QtjCPEPfkaHNLLLtpnVwnLhZ1K8ToRb5Fagsb46saQhnxt6e8PfzPc0OIHoG6YhQ3LP6j0IBmDNN2fqPPUf-qQVsmSFM_-p2kSbz0jJB8Ntg",
+      "widthPx": 900,
+      "heightPx": 600,
+      "authorAttributions": [
+        {
+          "displayName": "Mr Plumber Singapore - Central",
+          "uri": "https://maps.google.com/maps/contrib/117962320485092677439",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVgBAYgqJTNUrcdX5uLPIk8YPcx7i58H1I3wT9Loz53aNn_xj8=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipMae4FIojKCOCaTX0wBxypLM5_dhZWrdCYSuNT2&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipMae4FIojKCOCaTX0wBxypLM5_dhZWrdCYSuNT2!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcK6NUCFfvcT5Qw4ho8xlTLqzJsR9aznnV42aWXF10x6AmWBAADZE9M8uiPmcgHoKPUCThioKjEK8xwPStHEW75sDVjoH089sbQbXKwkGCF5xQrVKgMx20YpudYb2C9-AdWA4_3CyLdHK30ncJQHtPYVr4SPKabBLrphB6-0wGnhFKS7R7j8vL2T2RWt2ru3Fx8DS6EbYyQ_4QVufpEhT2vSZMxh_1QrEcnXNXwfJLhxm8KPUk2XL4g5kYvNQwZ3A5wk1h6KcDcOwglFGn3m-QmIDylrWkvTrUHtgprbxOciCA",
+      "widthPx": 900,
+      "heightPx": 600,
+      "authorAttributions": [
+        {
+          "displayName": "Mr Plumber Singapore - Central",
+          "uri": "https://maps.google.com/maps/contrib/117962320485092677439",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVgBAYgqJTNUrcdX5uLPIk8YPcx7i58H1I3wT9Loz53aNn_xj8=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNKd_RseNx8Lkl5J_EaoA8lA6VuohJ-z9MF9bXf&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNKd_RseNx8Lkl5J_EaoA8lA6VuohJ-z9MF9bXf!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcIQYoFdJYHn073mog4dZP-Pp9_8-dZTxKfouZk1JidJ5P8YtyHe6MDPzQiqfRhIbbYwqPRMnkobi9SOfYpgu8duacNGWKTFU5pHhI8f1bYoTR3Etdp4-LMkw8pa5me009Ez1DF5sA9wjT5Sgup0MDlKRr5lE9PM7CJMGppml6CAYNrA3xbjtVirDzkZmjh9uROGlqT17ctw7AdQBwTlcgehzNGVMbrP_WdQjuoj4ZLC92kppQ1jjro1vaI09CuyjcBkKfGzQmJDyYBOuNG-vxt2CX60bQwUZrD4CIH5mg0n7A",
+      "widthPx": 900,
+      "heightPx": 600,
+      "authorAttributions": [
+        {
+          "displayName": "Mr Plumber Singapore - Central",
+          "uri": "https://maps.google.com/maps/contrib/117962320485092677439",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjVgBAYgqJTNUrcdX5uLPIk8YPcx7i58H1I3wT9Loz53aNn_xj8=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sAF1QipNf04mSfI4PXwl3gmLKjcvuniCA8hlMLjh7P1LV&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sAF1QipNf04mSfI4PXwl3gmLKjcvuniCA8hlMLjh7P1LV!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcJh9lywQCZDB3wq7sKnyUvxrStunDW9sTKAfTnKKzVzzpoq-_ykhKPAgegi8OIv_B23upvJgkOsfmhhtlUCMSTw2PYvGIT0V-3mhrbPZTsPitUIR5rEAf3JTupPJ482R-XRF1nuDe0aqpTgreYEGpmhK40w-SyxFigS9LKgTVJc0UDdOXGyXMZ_1d8lgi04NXtdoV4FPiOBIJ6XwT3Y9ujqTEJWumetPp9uMOKJ-I5NkvwovBoGiGflmpE1FQBuFBwHAP47iBH839hyRXv9cjeppi-m2JXebgKUAdjGt4jwCR0-BkM30mBzmOdPqax2c7uK_6OIDeRiCi1CYMInuLsp4m6sR60d0ZPk38Crb3M_mNzKYT6155siAot8F66X2wtYLgBPyv8WQD_Yhn_Y6--5WrHb2prrcsbPsF2UDlJ_W_mB",
+      "widthPx": 4000,
+      "heightPx": 1868,
+      "authorAttributions": [
+        {
+          "displayName": "Muhd Heidir",
+          "uri": "https://maps.google.com/maps/contrib/106261161128576133795",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjU_nq0qIhG_W_8WR1-eRf0LJaOPpkgjxKerfENGoV6GN0BS85xB=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgMCws8PCjwE&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMCws8PCjwE!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcIar7nl_E-UxBiAGe6f_QE0gTOgS_IPMJkWwqfUGuihXUaHzTb8FhcwlVsKOdzZqHG7t-HlrW0vEneOqJFRoOZdsoepV6nxMt--IT733j45HfgNta7wr3xyGZ2Y0REcDQlLKdT-4nHJ6WDi-sRxzqhmGaGUir8LAhngzJXRVd6c8F1BA_htVBgoXCDjEZY7W0iLVawa42tBEo5kBZZAQlRVR7rhqIbhW8tKSNJbbP4JH4gqwqmRD89V7A1rsUnDs_okRAurkwx01oAAkOeHExT3UezUQ-oZJawJiby-NzeupTpshl0MnAXX97ky06fLxHA6gMY-qvnlN3Rd84sVuB80mp7b5kPC8SXxs1MnhtDOG_O60al0ckXFWXlsAGB1kieEYiHRqoTwTl86hf0UlF8QS7aj1eEjzU_ztgWa_ZMoutVA",
+      "widthPx": 3024,
+      "heightPx": 4032,
+      "authorAttributions": [
+        {
+          "displayName": "JX HO",
+          "uri": "https://maps.google.com/maps/contrib/112568362383075686521",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV5mc4qGId9C1lN0Uc9WGWbG3kup3deqsVRSo3WGRY9NamEaDOQ=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDvmLCY2wE&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDvmLCY2wE!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcKM9dKL7cJfaBREeuSpJkhFS-L-_rWlm5TW4V2rjRbq5bOaV3Ue6ZxpDM8DjlJfveRJQeceknctdlT_97WSJF8BHxR2xCKOiCyqtQ8jhp0MTnRx_zfdi3SVbsSt_U6HFeqh4mk-pD8RIFXSltPOAl5Y8lPfURNd8OeppEcc93jSUbGeUbsXEMHuvCETyEzozNMQpU-fPUOb2gHUKZEpqDuxxT-Duv3p8WOL88pf_fkZDslzsCjFv99BASWFgq2XgwDevo9UkpgPZkvOvUbmLtxrLilNTtgIO8Dh6meJ0iVK67X9HPp9syIVTFRkvYf9-X2n2wWN6EJwgN851SjP3Nhf0j6qwMdLolNOqCeS0vqoGCsRtHPIEsOiz5TjFNgBonwyBf5IH4XTNTqBr3hSElvkbxOnjCAS3F1qroMAIGZOrg",
+      "widthPx": 3024,
+      "heightPx": 4032,
+      "authorAttributions": [
+        {
+          "displayName": "Akhimullah",
+          "uri": "https://maps.google.com/maps/contrib/101625162786485631249",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjWV2WHRZuoEGIk5bdMo41N41I-bKhbqeoXCoxsp0J61Gc6R6Vg=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgMCgot-QAw&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMCgot-QAw!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcIegm3EKc_G24-rJWpxa3kJF12JtHlygHaTRqK3SVresfnnPA1CIdceoZZjV4zbHXb7Qgj5YeA5LBdfYR7N5sasmDhP5EA64J6ESDUn9qd1nwFBm75_2mtBjd02O22jlgCiS88n0MF2UfHpu8Zlmld9g77C4d9WCpYv3PK_2XwJfjL9z66uACz1uq9-uitpwcyhDlzTB5z6BPtPKqYiLDboQCGFTIlq4QkxjRqw_bdxpPVIq4S9K0d9CMPkF7xDZ-F0f6WoplJlUgKoEB7AsNRUN6VA4afzkNGoBkgHYzhWDJCQWdTLDLH7_nJmZT6mfWWEBGe8XkiJ3FpqKAIPjG5hFDG0sC7zZu8lewRZhSlvtup4OUw8f6sU5b5MZilL3BUaXjj7GWaNTPv6gx1zSnr9waVia89cprEgZy4QVJMa1FyK",
+      "widthPx": 3024,
+      "heightPx": 4032,
+      "authorAttributions": [
+        {
+          "displayName": "강정원",
+          "uri": "https://maps.google.com/maps/contrib/105199929416582709287",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjUWTch0XwNAhjLBaQ133J0h1fdSAOhfw-YvP-DjZeGgyQuxPXxN=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIC_1JeWjAE&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIC_1JeWjAE!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcKUJ3pMnMBaDDB2o3EgKlTr7mBmtW4tdISPEZ-IibwyeTFrMuxtxdPH_G4fJJ4vyHQcimUDutIS6fsZ9RJKfeOonNOI_fvHd-p-ItmgCJSWqlwr8hhMPTvX_f5T7yEZQVSp5SI4ub98KtwrK-qV2T4QHAx6X5mvashN8IKKRyGeYJ1rxe-pB2wtBibykKllh5_XyHu0SrUuZGr0fXF8qRnKpU8fCYL2OG9O8K46YP_2ewPPqQlblRv34fo7of97AczcEYVMqPmZ5hERcpXRuAXclT3p7qpbaWjoaM3UoFwwjv6jyV453GstBbGUeMu_rZFcXF-8RskR0No2HhNdR0nzX-CWqRpIALeykylKb7F9sLUWeynqX74Y2CVjRPLj84E0fU1qqq4HP9NlGJB3IhW5c7vCgQhXuDa0G_kwizI",
+      "widthPx": 3024,
+      "heightPx": 4032,
+      "authorAttributions": [
+        {
+          "displayName": "Serena Chan",
+          "uri": "https://maps.google.com/maps/contrib/114889411033373777685",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjXHwPzWQOVeGPYNW_H0nkblr5Z64Jvnt-Syas_CvCGDP17EII0=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgIDTo-OAcQ&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgIDTo-OAcQ!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    },
+    {
+      "name": "places/ChIJuQ2u_tcb2jER42J7DodkVMI/photos/AeeoHcLa35PNKwLBfwFpnGQIkc6fdXTpZ0aTBT-FimYTbbQKXqyj7yVYrbYWf7hdwK8LJexXl90Fqk6tGQo1OmuzkCuw86brOku3VnUWHC4-tRgqr-hMH5luh3D6Hd43QfQ5ATLfxrvCLdCzdArw8-FL_stgxLXzq4db7GC_pjKkTflt1u1lvL-nePMs9l_19gbkTxnN2m8jfQtIq_FgaQuYZ5RpJKaQBjl7Wx1TQ8qadEjYxO165ZJuDgFcNgdG4VyKfiAy5GqBxmwHAgU2g_XIXakhLW4MfTUXXOVPHCXSlZKDft7Z5GDNtOXcdD_DUEEVCftxDVApyksgNVoEU28MXib0lBW5hIH-L-BCoNdRtDxyoetnDobUxSmOvuzjVXpQjZvNBmUJg4-A3eC4aaKd-cyCv5HiMa0O8XIQ5RCSjgG6_Q",
+      "widthPx": 3024,
+      "heightPx": 4032,
+      "authorAttributions": [
+        {
+          "displayName": "Ada",
+          "uri": "https://maps.google.com/maps/contrib/107787834505403982053",
+          "photoUri": "https://lh3.googleusercontent.com/a-/ALV-UjV3w9MgaQrEh2JFjsyu45l97I3oCosO8Gzha9KQh2w1ALXKLZlH=s100-p-k-no-mo"
+        }
+      ],
+      "flagContentUri": "https://www.google.com/local/imagery/report/?cb_client=maps_api_places.places_api&image_key=!1e10!2sCIHM0ogKEICAgMCAs7DiCA&hl=en-US",
+      "googleMapsUri": "https://www.google.com/maps/place//data=!3m4!1e2!3m2!1sCIHM0ogKEICAgMCAs7DiCA!2e10!4m2!3m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3"
+    }
+  ],
+  "containingPlaces": [
+    {
+      "name": "places/ChIJzxwZERgY2jER2FX37qmG49Q",
+      "id": "ChIJzxwZERgY2jER2FX37qmG49Q"
+    }
+  ],
+  "pureServiceAreaBusiness": false,
+  "addressDescriptor": {
+    "landmarks": [
+      {
+        "name": "places/ChIJD7-cjRgY2jERZUJyfHaIYDY",
+        "placeId": "ChIJD7-cjRgY2jERZUJyfHaIYDY",
+        "displayName": {
+          "text": "Lifelong Learning Institute - Learning Hub in Singapore",
+          "languageCode": "en"
+        },
+        "types": ["establishment", "point_of_interest"],
+        "straightLineDistanceMeters": 46.658024
+      },
+      {
+        "name": "places/ChIJzxwZERgY2jER2FX37qmG49Q",
+        "placeId": "ChIJzxwZERgY2jER2FX37qmG49Q",
+        "displayName": {
+          "text": "Paya Lebar Square",
+          "languageCode": "en"
+        },
+        "types": ["establishment", "point_of_interest", "shopping_mall"],
+        "spatialRelationship": "WITHIN",
+        "straightLineDistanceMeters": 3.7971778
+      },
+      {
+        "name": "places/ChIJU8zODXwZ2jERNsDnX0rcqpQ",
+        "placeId": "ChIJU8zODXwZ2jERNsDnX0rcqpQ",
+        "displayName": {
+          "text": "PLQ Mall",
+          "languageCode": "en"
+        },
+        "types": ["establishment", "point_of_interest", "shopping_mall"],
+        "straightLineDistanceMeters": 180.50842
+      },
+      {
+        "name": "places/ChIJC8ructcZ2jER2WPSgnCqzoc",
+        "placeId": "ChIJC8ructcZ2jER2WPSgnCqzoc",
+        "displayName": {
+          "text": "SingPost Centre",
+          "languageCode": "en"
+        },
+        "types": ["establishment", "point_of_interest", "shopping_mall"],
+        "straightLineDistanceMeters": 168.62115
+      },
+      {
+        "name": "places/ChIJU-xrGhgY2jERLX7VN6dXpsA",
+        "placeId": "ChIJU-xrGhgY2jERLX7VN6dXpsA",
+        "displayName": {
+          "text": "Paya Lebar",
+          "languageCode": "en"
+        },
+        "types": [
+          "establishment",
+          "point_of_interest",
+          "subway_station",
+          "transit_station"
+        ],
+        "straightLineDistanceMeters": 130.0782
+      }
+    ],
+    "areas": [
+      {
+        "name": "places/ChIJfZ9Z0CMY2jERkKXarqz3AAU",
+        "placeId": "ChIJfZ9Z0CMY2jERkKXarqz3AAU",
+        "displayName": {
+          "text": "Geylang",
+          "languageCode": "en"
+        },
+        "containment": "WITHIN"
+      },
+      {
+        "name": "places/ChIJPclshCIY2jEReamS-mjlzPw",
+        "placeId": "ChIJPclshCIY2jEReamS-mjlzPw",
+        "displayName": {
+          "text": "Geylang East Industrial Estate",
+          "languageCode": "en"
+        },
+        "containment": "NEAR"
+      }
+    ]
+  },
+  "googleMapsLinks": {
+    "directionsUri": "https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x31da1bd7feae0db9:0xc25464870e7b62e3!3e0",
+    "placeUri": "https://maps.google.com/?cid=14002927672628044515",
+    "writeAReviewUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x31da1bd7feae0db9:0xc25464870e7b62e3!12e1",
+    "reviewsUri": "https://www.google.com/maps/place//data=!4m4!3m3!1s0x31da1bd7feae0db9:0xc25464870e7b62e3!9m1!1b1",
+    "photosUri": "https://www.google.com/maps/place//data=!4m3!3m2!1s0x31da1bd7feae0db9:0xc25464870e7b62e3!10e5"
+  },
+  "timeZone": {
+    "id": "Asia/Singapore"
+  },
+  "postalAddress": {
+    "regionCode": "SG",
+    "languageCode": "en-US",
+    "postalCode": "409051",
+    "addressLines": ["60 Paya Lebar Rd", "#07-54"]
+  }
+}

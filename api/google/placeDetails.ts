@@ -2,7 +2,7 @@
 import { useQuery, type UseQueryResult } from "@tanstack/react-query";
 import { objectToCamel, ObjectToCamel } from "ts-case-convert";
 
-import { type Tables } from "@/types/database.types";
+import { GooglePlaceApiResponse } from "@/types/google/placesTypes";
 
 const getPlaceDetails = async (placeId: string) => {
   try {
@@ -31,7 +31,7 @@ export const GET_PLACE_DETAILS = "GET_PLACE_DETAILS";
 
 export const useGetPlaceDetails = (
   placeId: string,
-): UseQueryResult<ObjectToCamel<Tables<"service_categories">[]>> => {
+): UseQueryResult<ObjectToCamel<GooglePlaceApiResponse>> => {
   return useQuery({
     queryKey: [GET_PLACE_DETAILS],
     queryFn: async () => {
