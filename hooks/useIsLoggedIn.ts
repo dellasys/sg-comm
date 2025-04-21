@@ -2,9 +2,9 @@ import { useQuery, type UseQueryResult } from "@tanstack/react-query";
 
 import supabase from "@/utils/supabase";
 
-const IS_USER_LOGGED_IN = "IS_USER_LOGGED_IN";
+export const IS_USER_LOGGED_IN = "IS_USER_LOGGED_IN";
 
-const useIsLoggedIn = (): UseQueryResult<boolean> => {
+export const useIsLoggedIn = (): UseQueryResult<boolean> => {
   return useQuery({
     queryKey: [IS_USER_LOGGED_IN],
     queryFn: async (): Promise<boolean> => {
@@ -15,5 +15,3 @@ const useIsLoggedIn = (): UseQueryResult<boolean> => {
     },
   });
 };
-
-export default useIsLoggedIn;

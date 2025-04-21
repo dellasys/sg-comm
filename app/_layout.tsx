@@ -52,7 +52,7 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-  console.log({ colorScheme });
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
@@ -132,15 +132,9 @@ export default function RootLayout() {
               headerRight: () => <Button title="Close" onPress={back} />,
             }}
           />
+
           <Stack.Screen
-            name="user/personal-information"
-            options={{
-              headerStyle: { backgroundColor: Colors.theme.main },
-              headerTitle: "",
-            }}
-          />
-          <Stack.Screen
-            name="user/change-phone"
+            name="user"
             options={{
               headerStyle: { backgroundColor: Colors.theme.main },
               headerTitle: "",

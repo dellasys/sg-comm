@@ -2,8 +2,13 @@ import { StyleSheet, Image } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import useUserInfo from "@/hooks/useUserInfo";
 
 const AuthorizedProfile = () => {
+  const { data } = useUserInfo();
+  const { userMetadata } = data ?? {};
+  const { name } = userMetadata ?? {};
+
   return (
     <ThemedView style={{ flexDirection: "row", flex: 1 }}>
       <ThemedView style={styles.logoWrapper}>
@@ -19,7 +24,7 @@ const AuthorizedProfile = () => {
           flex: 1,
         }}
       >
-        <ThemedText style={styles.menuText}>Yin Sheng</ThemedText>
+        <ThemedText style={styles.menuText}>{name}</ThemedText>
         <ThemedText style={styles.editProfileText}>
           Edit personal details
         </ThemedText>

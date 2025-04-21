@@ -10,7 +10,7 @@ import PasswordTextInput from "@/components/auth/login/PasswordTextInput";
 import SignUpLink from "@/components/auth/login/SignUpLink";
 import SocialMediaLogin from "@/components/auth/login/SocialMediaLogin";
 import WelcomeText from "@/components/auth/login/WelcomeText";
-import useIsLoggedIn from "@/hooks/useIsLoggedIn";
+import { useIsLoggedIn } from "@/hooks/useIsLoggedIn";
 
 const AuthLogin = () => {
   const { data: isLoggedIn, isFetching } = useIsLoggedIn();

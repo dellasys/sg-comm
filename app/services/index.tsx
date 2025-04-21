@@ -10,7 +10,7 @@ import {
 
 import { useSearchPlaces, SEARCH_PLACES } from "@/api/google/placeSearch";
 import ServiceListItem from "@/components/ServiceListItem";
-import EndOfPost from "@/components/ServiceListItem/EndOfPost";
+import NoResult from "@/components/ServiceListItem/NoResult";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import CommonLoader from "@/components/loaders/CommonLoader";
@@ -76,10 +76,6 @@ export default function ServiceScreen() {
       <ScrollView onScroll={handleScroll} scrollEventThrottle={200}>
         <ThemedView style={styles.container}>
           {serviceList.map((place) => {
-            // if (place?.displayName?.text.includes("Good Dog People")) {
-            //   console.log(8839, { place });
-            // }
-
             if (!place?.id) {
               return null;
             }
@@ -93,7 +89,7 @@ export default function ServiceScreen() {
               </ThemedText>
             </ThemedView>
           )}
-          {!hasNextPage && <EndOfPost />}
+          {!hasNextPage && <NoResult />}
         </ThemedView>
       </ScrollView>
     </SafeAreaView>

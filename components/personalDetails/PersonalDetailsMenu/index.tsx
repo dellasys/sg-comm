@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 import { ThemedView } from "@/components/ThemedView";
 import AnonymousProfile from "@/components/personalDetails/PersonalDetailsMenu/AnonymousProfile";
 import AuthorizedProfile from "@/components/personalDetails/PersonalDetailsMenu/AuthorizedProfile";
-import useIsLoggedIn from "@/hooks/useIsLoggedIn";
+import { useIsLoggedIn } from "@/hooks/useIsLoggedIn";
 import ChevronIcon from "@/icons/Chevron";
 
 const PersonalDetailsMenu = () => {

@@ -5,13 +5,19 @@ import AppVersion from "@/components/personalDetails/AppVersion";
 import ClickableSettingMenu from "@/components/personalDetails/ClickableSettingMenu";
 import CommonSettingMenu from "@/components/personalDetails/CommonSettingMenu";
 import PersonalDetailsMenu from "@/components/personalDetails/PersonalDetailsMenu";
+import { useIsLoggedIn, IS_USER_LOGGED_IN } from "@/hooks/useIsLoggedIn";
 import useUserInfo from "@/hooks/useUserInfo";
-import GoogleLogoIcon from "@/icons/GoogleLogo";
+import BookmarkIcon from "@/icons/Bookmark";
+import FeedbackIcon from "@/icons/Feedback";
+import HelpIcon from "@/icons/Help";
 import LogoutIcon from "@/icons/Logout";
+import PaymentIcon from "@/icons/Payment";
+import queryClient from "@/utils/queryClient";
 import supabase from "@/utils/supabase";
 
 export default function UserProfile() {
   useUserInfo();
+  const { data: isLoggedIn } = useIsLoggedIn();
 
   const onLogout = () => {
     Alert.alert("Logout", "Are you sure you want to logout?", [
@@ -21,9 +27,10 @@ export default function UserProfile() {
       },
       {
         text: "OK",
-        onPress: () => {
+        onPress: async () => {
           // Handle logout logic here
-          void supabase.auth.signOut();
+          await supabase.auth.signOut();
+          void queryClient.invalidateQueries({ queryKey: [IS_USER_LOGGED_IN] });
         },
       },
     ]);
@@ -53,29 +60,31 @@ export default function UserProfile() {
           /> */}
           <CommonSettingMenu
             label="Feedback"
-            screenPath="/profile/create-new-password"
-            icon={<GoogleLogoIcon size={35} color="#fff" />}
+            screenPath="/user/feedback"
+            icon={<FeedbackIcon size={40} />}
           />
           <CommonSettingMenu
             label="Payment"
             screenPath="/profile/create-new-password"
-            icon={<GoogleLogoIcon size={35} color="#fff" />}
+            icon={<PaymentIcon size={35} />}
           />
           <CommonSettingMenu
             label="Saved Services"
-            screenPath="/profile/details"
-            icon={<GoogleLogoIcon size={35} color="#fff" />}
+            screenPath="/user/bookmarks"
+            icon={<BookmarkIcon size={35} />}
           />
           <CommonSettingMenu
             label="Help Center"
-            screenPath="/profile/signup"
-            icon={<GoogleLogoIcon size={35} color="#fff" />}
+            screenPath="/user/helpcenter"
+            icon={<HelpIcon size={35} color="#fff" />}
           />
-          <ClickableSettingMenu
-            label="Logout"
-            onClick={onLogout}
-            icon={<LogoutIcon size={35} color="#fff" />}
-          />
+          {isLoggedIn && (
+            <ClickableSettingMenu
+              label="Logout"
+              onClick={onLogout}
+              icon={<LogoutIcon size={35} color="#fff" />}
+            />
+          )}
         </ThemedView>
         <AppVersion />
       </ThemedView>

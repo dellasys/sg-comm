@@ -23,8 +23,9 @@ const SignUpButton = () => {
         },
       },
     });
+
     const { user, error } = response;
-    console.log(7483, response);
+
     if (error) {
       console.error("Sign up error:", error.message);
     }

@@ -21,17 +21,16 @@ export default PageHeading;
 
 const styles = StyleSheet.create({
   titleContainer: {
-    justifyContent: "center",
     paddingVertical: 10,
     paddingBottom: 15,
   },
   titleText: {
-    fontSize: 23,
+    fontSize: 24,
     fontWeight: "bold",
-    paddingBottom: 5,
   },
   subtitleText: {
-    fontSize: 13,
+    fontSize: 15,
+    marginTop: 10,
     color: "#666",
   },
 });

@@ -25,7 +25,7 @@ const GenderFormField = () => {
   const { personalInformation, updatePersonalInformation } =
     usePersonalInformation();
   const { gender } = personalInformation ?? {};
-  console.log({ gender });
+
   const onChangeText = ({ value }: { value: string }) => {
     updatePersonalInformation("gender", value);
   };

@@ -1,13 +1,13 @@
-import { Session } from "@supabase/supabase-js";
+import { User } from "@supabase/supabase-js";
 import { useQuery, type UseQueryResult } from "@tanstack/react-query";
-import { objectToCamel } from "ts-case-convert";
+import { objectToCamel, ObjectToCamel } from "ts-case-convert";
 
 import { usePersonalInformation } from "@/state/personalInformation/usePersonalInformation";
 import supabase from "@/utils/supabase";
 
 const USER_INFO = "USER_INFO";
 
-const useUserInfo = (): UseQueryResult<Session | null> => {
+const useUserInfo = (): UseQueryResult<ObjectToCamel<User> | null> => {
   const { setPersonalInformation } = usePersonalInformation();
 
   return useQuery({
@@ -36,7 +36,7 @@ const useUserInfo = (): UseQueryResult<Session | null> => {
         });
       }
 
-      return session;
+      return user;
     },
   });
 };

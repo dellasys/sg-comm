@@ -41,6 +41,12 @@
         }
       ],
       [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.759327844791-3a5vsb8je3v4tkiemi4h1c68bkhc78n4"
+        }
+      ],
+      [
         "expo-font",
         {
           "fonts": [
@@ -66,7 +72,7 @@
         "origin": false
       },
       "eas": {
-        "projectId": "a8f5f44a-157f-45d3-92cd-7f3bd90128b9"
+        "projectId": "5079854b-97af-44e5-aadf-563f9f8b613a"
       }
     },
     "runtimeVersion": {

@@ -3,10 +3,14 @@ import { Image, StyleSheet } from "react-native";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 
-const EndOfPost = () => {
+interface NoResultProps {
+  title?: string;
+}
+
+const NoResult = ({ title = "The End of The Result" }: NoResultProps) => {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText style={styles.label}>The End of The Result</ThemedText>
+      <ThemedText style={styles.label}>{title}</ThemedText>
       <Image
         source={require("@/assets/images/empty_icon.png")}
         style={styles.image}
@@ -16,7 +20,7 @@ const EndOfPost = () => {
   );
 };
 
-export default EndOfPost;
+export default NoResult;
 
 const styles = StyleSheet.create({
   container: {

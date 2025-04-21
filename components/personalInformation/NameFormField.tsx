@@ -8,7 +8,7 @@ const NameFormField = () => {
   const { updatePersonalInformation, personalInformation } =
     usePersonalInformation();
   const { name } = personalInformation ?? {};
-  console.log(7343, personalInformation);
+
   const onChangeText = (value: string) => {
     updatePersonalInformation("name", value);
   };

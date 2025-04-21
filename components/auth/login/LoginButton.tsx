@@ -3,12 +3,14 @@ import { StyleSheet, TouchableOpacity, Alert } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { IS_USER_LOGGED_IN } from "@/hooks/useIsLoggedIn";
 import { useLoginEmailInput } from "@/state/login/useLoginEmailInput";
 import { useLoginPasswordInput } from "@/state/login/useLoginPasswordInput";
+import queryClient from "@/utils/queryClient";
 import supabase from "@/utils/supabase";
 
 const LoginButton = () => {
-  const { push } = useRouter();
+  const { back } = useRouter();
   const { email } = useLoginEmailInput();
   const { password } = useLoginPasswordInput();
 
@@ -17,10 +19,10 @@ const LoginButton = () => {
       email,
       password,
     });
-    console.log(347, response);
+
     const { data, error } = response;
     const { user } = data ?? {};
-    console.log(7483, user, error);
+
     if (error?.code === "email_not_confirmed") {
       Alert.alert(
         "Login Error",
@@ -28,8 +30,8 @@ const LoginButton = () => {
       );
     }
     if (user) {
-      console.log("User logged in:", user);
-      push("/(tabs)/(home)");
+      back();
+      void queryClient.invalidateQueries({ queryKey: [IS_USER_LOGGED_IN] });
     }
   };
 
